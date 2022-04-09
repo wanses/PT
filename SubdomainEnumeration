@@ -1,0 +1,22 @@
+OSINT
+1. SSL/TLS Cert
+sites like https://crt.sh and https://transparencyreport.google.com/https/certificates offer a searchable database of certificates that shows current and historical results.
+
+2. Search Engine
+Google and use the search term -site:www.tryhackme.com  site:*.tryhackme.com
+
+3. use sublist3r tool : https://github.com/aboul3la/Sublist3r
+./sublist3r.py -d $url
+
+
+
+==========================================================
+Brute force
+1. dnsrecon -t brt -d $url
+
+==========================================================
+Virutal Host
+1. Fuzz it and find the most common size: 
+   ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.Wanses.com" -u http://10.10.10.10
+   Fuzz it againt with to exclude the common size:
+ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.10.126.137 -fs {size}
