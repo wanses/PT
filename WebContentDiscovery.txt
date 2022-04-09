@@ -1,0 +1,32 @@
+Manual:
+1. Check Robots.txt
+
+2. Check Favicon
+curl https://$IP/favicon.ico | md5sum
+lookup in https://wiki.owasp.org/index.php/OWASP_favicon_database
+
+3. Check Sitemap.xml for outdated directories or not obvious ones
+
+4. Check HTTP headers
+
+5. Check the documentation of the framework and admin portals and default credentials
+==============================================
+OSINT
+6. Google Dorking
+site:
+inurl: admin
+filetype: pdf,xml,txt,db
+intitle: admin
+
+7. Wappalyzer
+
+8. Wayback Machine: https://archive.org/web/
+
+9. GitHub's search feature to look for company names or website names to try and locate repositories belonging to your target.
+   Once discovered, you may have access to source code, passwords or other content that you hadn't yet found.
+   
+10. S3 Buckets : http(s)://{name}.s3.amazonaws.com
+    One common automation method is by using the company name followed by common terms such as {name}-assets, {name}-www, {name}-public, {name}-private, etc.
+==============================================
+Automated
+11. Gobuster, Dirb, Dirbuster
