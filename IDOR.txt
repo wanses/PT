@@ -1,0 +1,7 @@
+1. Find parameters that can change, 
+{base64:https://www.base64decode.org/ | md5:https://crackstation.net/}
+http://wanses.com/profile?user_id=1305
+http://wanses.com/api/v1/customer?id=15
+check headers on any page retreiving your username or account info
+
+2. parameter mining
