@@ -1,0 +1,10 @@
+1. python -c 'import pty;pty.spawn("/bin/bash")' <== for a better listener shell experience
+
+2. sudo -l
+
+3. fine / -perm +6000 2>/dev/null | grep '/bin' <== find interesting tools that can exploit shell
+
+4. https://gtfobins.github.io/ followed the interesting tools that can exploit 
+
+5. https://github.com/carlospolop/PEASS-ng 
+
