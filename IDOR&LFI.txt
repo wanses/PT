@@ -12,3 +12,6 @@ check headers on any page retreiving your username or account info
 LFI
 
 1. https://medium.com/@Aptive/local-file-inclusion-lfi-web-application-penetration-testing-cc9dc8dd3601
+
+2. https://zsahi.wordpress.com/2018/09/10/file-inclusion/
+
