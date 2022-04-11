@@ -5,3 +5,10 @@ http://wanses.com/api/v1/customer?id=15
 check headers on any page retreiving your username or account info
 
 2. parameter mining
+
+
+
+
+LFI
+
+1. https://medium.com/@Aptive/local-file-inclusion-lfi-web-application-penetration-testing-cc9dc8dd3601
