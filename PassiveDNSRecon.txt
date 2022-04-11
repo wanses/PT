@@ -1,0 +1,7 @@
+Lookup WHOIS record 	whois wanses.xyz
+Lookup DNS A records 	nslookup -type=A wanses.xyz
+Lookup DNS MX records at DNS server 	nslookup -type=MX wanses.xyz 1.1.1.1
+Lookup DNS TXT records 	nslookup -type=TXT wanses.xyz
+Lookup DNS A records 	dig wanses.xyz A
+Lookup DNS MX records at DNS server 	dig @1.1.1.1 wanses.xyz MX
+Lookup DNS TXT records 	dig wanses.xyz TXT
