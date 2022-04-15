@@ -6,5 +6,5 @@ telnet 	telnet 10.10.245.26 PORT_NUMBER
 netcat as client 	nc 10.10.245.26 PORT_NUMBER
 netcat as server 	nc -lvnp PORT_NUMBER
 
-
+Find the best tools to use for each port open found:
 http://www.vulnerabilityassessment.co.uk/Penetration%20Test.html
