@@ -6,6 +6,8 @@
 
 4. https://gtfobins.github.io/ followed the interesting tools that can exploit 
 
+- https://www.kumaratuljaiswal.in/2021/06/tryhackme-res-redis-pentesting.html <== xxd step for reading a file if SUID is set
+
 5. 
 LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
 LinEnum: https://github.com/rebootuser/LinEnum
