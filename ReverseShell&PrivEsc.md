@@ -1,9 +1,9 @@
 # PrivEscalation
 ***
-### * Better listener shell experience
+### > Better listener shell experience
 ```python -c 'import pty;pty.spawn("/bin/bash")'``` 
 
-### * List sudo capability of the current user
+### > List sudo capability of the current user
 ```sudo -l```
 
 ### * Find interesting binaries that can exploit shell
