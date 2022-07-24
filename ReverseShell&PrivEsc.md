@@ -1,18 +1,18 @@
 # PrivEscalation
 ***
-> ### Better listener shell experience
+* ### Better listener shell experience
 ```python -c 'import pty;pty.spawn("/bin/bash")'``` 
 
 
-### > List sudo capability of the current user
+* ### List sudo capability of the current user
 ```sudo -l```
 
 
-### > Find interesting binaries that can exploit shell
+* ### > Find interesting binaries that can exploit shell
 ```find / -perm /6000 2>/dev/null | grep '/bin'```
 
 
-### > https://gtfobins.github.io/ followed the interesting tools that can exploit 
+* ### > https://gtfobins.github.io/ followed the interesting tools that can exploit 
 
 
 ### > env_keep exploit when ```sudo -l``` and ```ddl <thetargetedprogram>``` to find its libraries
