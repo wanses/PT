@@ -72,7 +72,13 @@ Linux Priv Checker: https://github.com/linted/linuxprivchecker
 * # Windows Commands
 	
 * ### Powershell history 
-```type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt```
+```
+type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
+```
+
+* ### Find saved credentials and use runas to open cmd of those creds
+To list the credentials available for this user ```cmdkey /list``` 
+To use that user's cmd ```runas /savecred /user:<USER> cmd.exe```
 
 # Reverse Shell
 ***
