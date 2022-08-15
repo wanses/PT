@@ -69,6 +69,9 @@ LES (Linux Exploit Suggester): https://github.com/mzet-/linux-exploit-suggester
 Linux Smart Enumeration: https://github.com/diego-treitos/linux-smart-enumeration
 Linux Priv Checker: https://github.com/linted/linuxprivchecker
 
+* # Windows Commands
+	
+* ### Powershell history ```type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt```
 
 # Reverse Shell
 ***
