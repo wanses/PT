@@ -71,7 +71,8 @@ Linux Priv Checker: https://github.com/linted/linuxprivchecker
 
 * # Windows Commands
 	
-* #### Powershell history ```type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt```
+* ### Powershell history 
+```type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt```
 
 # Reverse Shell
 ***
