@@ -70,7 +70,15 @@ Linux Smart Enumeration: https://github.com/diego-treitos/linux-smart-enumeratio
 Linux Priv Checker: https://github.com/linted/linuxprivchecker
 
 * # Windows Commands
-	
+
+* ### unattended files found in
+```
+ C:\Unattend.xml
+ C:\Windows\Panther\Unattend.xml
+ C:\Windows\Panther\Unattend\Unattend.xml
+ C:\Windows\system32\sysprep.inf
+ C:\Windows\system32\sysprep\sysprep.xml	
+```
 * ### Powershell history 
 ```
 type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt
@@ -80,6 +88,20 @@ type %userprofile%\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\Conso
 To list the credentials available for this user ```cmdkey /list``` 
 To use that user's cmd ```runas /savecred /user:<USER> cmd.exe```
 
+*### Find web.config that belong to IIS in those location
+```
+ C:\inetpub\wwwroot\web.config
+ C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config
+```
+and to find database connections in them use 
+```
+type C:\Windows\Microsoft.NET\Framework64\v4.0.30319\Config\web.config | findstr connectionString
+```
+
+* ### Retrieve creds from PuTTy
+```reg query HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\ /f "Proxy" /s```
+	
+	
 # Reverse Shell
 ***
 * ### https://www.revshells.com/
